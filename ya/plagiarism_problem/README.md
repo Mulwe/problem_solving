@@ -10,14 +10,17 @@ Both lines are compared for plagiarism and had the same size and contain only up
 
 `I` - innocence, other cases;
 
-## Example.
+## Example
 Input:
+
 `
-  AZZZZZZZ
-  AZZZZAAA
-  PPSIIISI
+  AZZZZZZZ\
+  AZZZZAAA\
+  PPSIIISI\
 `
+
 Output:
+
 `
   PPSIIISI
 `
