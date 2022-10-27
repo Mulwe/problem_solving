@@ -5,10 +5,10 @@ Both lines are compared for plagiarism and had the same size and contain only up
 Сheck every character of the second line for plagiarism. Output the result, for every character:
 
 `P` - plagiarism, only if characters equal;\
-`S` - suspicion, if one of the characters has already been compared, but `-->`\
+`S` - suspicion, if one of the characters has already been compared, but \
+> `P` and `S` can used only once for one kind of character.\
 `I` - innocence, other cases;
 
-`-->` `P` and `S` can used only once for one kind of character.
 
 Example. Input:
 `
