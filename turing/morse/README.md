@@ -14,4 +14,6 @@ Example 1:
 
 Constraints:
 - 1 <= morsecode.length <= 500
-- morsecode[i] is either '.' or '-'.
+- morsecode[i] is either `'.'` or `'-'`.
+
+I implemented function that returns allocated list with data (filled or empty).
