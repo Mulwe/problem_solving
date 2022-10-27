@@ -1,6 +1,9 @@
 #include <iostream>
 #include <string>
 #include <list>
+
+using namespace std;
+
 /**
  * Morse Code
  *
@@ -18,16 +21,17 @@
  *  	morsecode[i] is either '.' or '-'.
  * **/
 
-void show_lst(std::list<std::string> &lst);
+void show_lst(list<string> &lst);
 
-void morse_code(void)
+/**allocate memory**/
+list<string> *morse_code(void)
 {
-	std::string str;
-	std::list<std::string> lst;
+	list<string> lst;
+	string str;
 	int pos = 0;
 
-	std::cin >> str;
-	if (str.length() > 0 && str.length() <= 500 && str.find("..") != std::string::npos)
+	cin >> str;
+	if (str.length() > 0 && str.length() <= 500 && str.find("..") != string::npos)
 	{
 		while (1)
 		{
@@ -38,24 +42,32 @@ void morse_code(void)
 			pos += 1;
 		}
 	}
+	list<string> *alst = new list<string>;
 	if (!lst.empty())
-		show_lst(lst);
-	std::cout << '\n';
+	{
+		alst->resize(lst.size());
+		copy(lst.begin(), lst.end(), alst->begin());
+	}
+	return (alst);
 }
 
-void show_lst(std::list<std::string> &lst)
+void show_lst(list<string> &lst)
 {
 	if (!lst.empty())
 	{
-		std::cout << "[";
+		cout << "[";
 		for (auto it = lst.begin(); it != lst.end(); it++)
-			std::cout << "\"" << (*it) << ((*it) == lst.back() ? "\"" : "\",");
-		std::cout << "]";
+			cout << "\"" << (*it) << ((*it) == lst.back() ? "\"" : "\",");
+		cout << "]";
 	}
+	cout << endl;
 }
 
 int main(void)
 {
-	morse_code();
+	list<string> *tmp;
+	tmp = morse_code();
+	show_lst(*tmp);
+	delete tmp;
 	return (0);
 }
