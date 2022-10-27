@@ -14,8 +14,7 @@ Both lines are compared for plagiarism and had the same size and contain only up
 Input:
 
 `   AZZZZZZZ`\
-`   AZZZZAAA`\
-`   PPSIIISI`\
+`   AZZZZAAA`
 
 Output:
 
