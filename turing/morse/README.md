@@ -9,8 +9,9 @@ Return all possible morse codes you can get after a single move you do to the st
 If you cannot do any moves, just return an empty array.
 
 Example 1:
-- Input: `morsecode = "...."`
-- Output: `["--..",".--.","..--"]`
+- Input: morsecode = "...."
+- Output: ["--..",".--.","..--"]
+
 Constraints:
 - 1 <= morsecode.length <= 500
 - morsecode[i] is either '.' or '-'.
